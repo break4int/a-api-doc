@@ -13,7 +13,7 @@
 	"basePath": "/americano/api",
 	"tags": [
 		{
-			"name": "Authentication",
+			"name": "Device",
 			"description": "스펙 미정"
 		},
 		{
@@ -42,12 +42,12 @@
 		}
 	],
 	"paths": {
-		"/fingerprint": {
-			"put": {
-				"operationId": "getFingerprint",
+		"/device/fingerprint": {
+			"get": {
+				"operationId": "getDeviceFingerprint",
 				"summary": "개인 인증키 발급",
 				"description": "ㅁㅇㄴㅁㅇㅁㄴㅇ",
-				"tags": ["Authentication"],
+				"tags": ["Device"],
 				"parameters": [
 					{
 						"in" : "body",
