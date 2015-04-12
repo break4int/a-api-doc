@@ -48,21 +48,11 @@
 				"summary": "개인 인증키 발급",
 				"description": "ㅁㅇㄴㅁㅇㅁㄴㅇ",
 				"tags": ["Device"],
-				"parameters": [
-					{
-						"in" : "body",
-						"description" : "회원가입 정보",
-						"required" : true,
-						"schema": {
-							"$ref": "#/definitions/SignUpVO"
-						}
-					}
-				],
 				"responses": {
 					"200": {
-						"description" : "가입된 회원정보",
+						"description" : "",
 						"schema" : {
-							"$ref" : "#/definitions/UserVO"
+							"$ref" : "#/definitions/ResponseVO"
 						}
 					},
 					"default": {
