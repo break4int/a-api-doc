@@ -13,6 +13,10 @@
 	"basePath": "/americano/api",
 	"tags": [
 		{
+			"name": "Authentication",
+			"description": "스펙 미정"
+		},
+		{
 			"name": "User",
 			"_description": "사용자 관련...  인증관련은 마지막에요.."
 		},
@@ -38,6 +42,35 @@
 		}
 	],
 	"paths": {
+		"/fingerprint": {
+			"put": {
+				"operationId": "getFingerprint",
+				"summary": "개인 인증키 발급",
+				"description": "ㅁㅇㄴㅁㅇㅁㄴㅇ",
+				"tags": ["Authentication"],
+				"parameters": [
+					{
+						"in" : "body",
+						"description" : "회원가입 정보",
+						"required" : true,
+						"schema": {
+							"$ref": "#/definitions/SignUpVO"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description" : "가입된 회원정보",
+						"schema" : {
+							"$ref" : "#/definitions/UserVO"
+						}
+					},
+					"default": {
+						"description" : "Unexpected error"
+					}
+				}
+			}
+		},
 		"/user/{userId}/ticket": {
 			"get": {
 				"operationId": "getTicketList",
