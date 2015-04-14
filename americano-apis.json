@@ -60,7 +60,10 @@
 						}
 					},
 					"default": {
-						"description" : "Unexpected error"
+						"description" : "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/UnknownErrorVO
+						}
 					}
 				}
 			}
@@ -465,12 +468,14 @@
 				"code": {
 					"type" : "string",
 					"format" : "string",
-					"description": "string / result code"
+					"description": "string / result code",
+					"example": "A_0000"
 				},
 				"message": {
 					"type": "string",
 					"format": "string",
-					"description": "string / response message"
+					"description": "string / response message",
+					"example": "OK"
 				},
 				"result": {
 					"$ref" : "#/definitions/UserVO"
@@ -565,12 +570,14 @@
 				"code": {
 					"type" : "string",
 					"format" : "string",
-					"description": "string / result code"
+					"description": "string / result code",
+					"example": "A_0000"
 				},
 				"message": {
 					"type": "string",
 					"format": "string",
-					"description": "string / response message"
+					"description": "string / response message",
+					"example": "OK"
 				},
 				"result": {
 					"$ref" : "#/definitions/PartnerListVO"
@@ -661,12 +668,14 @@
 				"code": {
 					"type" : "string",
 					"format" : "string",
-					"description": "string / result code"
+					"description": "string / result code",
+					"example": "A_0000"
 				},
 				"message": {
 					"type": "string",
 					"format": "string",
-					"description": "string / response message"
+					"description": "string / response message",
+					"example": "OK"
 				},
 				"result": {
 					"$ref" : "#/definitions/PartnerDetailVO"
@@ -747,12 +756,14 @@
 				"code": {
 					"type" : "string",
 					"format" : "string",
-					"description": "string / result code"
+					"description": "string / result code",
+					"example": "A_0000"
 				},
 				"message": {
 					"type": "string",
 					"format": "string",
-					"description": "string / response message"
+					"description": "string / response message",
+					"example": "OK"
 				},
 				"result": {
 					"$ref" : "#/definitions/TicketVO"
@@ -788,12 +799,14 @@
 				"code": {
 					"type" : "string",
 					"format" : "string",
-					"description": "string / result code"
+					"description": "string / result code",
+					"example": "A_0000"
 				},
 				"message": {
 					"type": "string",
 					"format": "string",
-					"description": "string / response message"
+					"description": "string / response message",
+					"example": "OK"
 				},
 				"result": {
 					"$ref" : "#/definitions/TicketListVO"
@@ -805,12 +818,14 @@
 				"code": {
 					"type" : "string",
 					"format" : "string",
-					"description": "string / result code"
+					"description": "string / result code",
+					"example": "A_0000"
 				},
 				"message": {
 					"type": "string",
 					"format": "string",
-					"description": "string / response message"
+					"description": "string / response message",
+					"example": "OK"
 				},
 				"result": {
 					"type": "string",
@@ -825,12 +840,30 @@
 				"code": {
 					"type" : "string",
 					"format" : "string",
-					"description": "string / result code"
+					"description": "string / result code",
+					"example": "A_0000"
 				},
 				"message": {
 					"type": "string",
 					"format": "string",
-					"description": "string / response message"
+					"description": "string / response message",
+					"example": "OK"
+				}
+			}
+		},
+		"UnknownErrorVO": {
+			"properties" : {
+				"code": {
+					"type" : "string",
+					"format" : "string",
+					"description": "string / result code",
+					"example": "A_9999"
+				},
+				"message": {
+					"type": "string",
+					"format": "string",
+					"description": "string / response message",
+					"example": "Unknown Error"
 				}
 			}
 		},
@@ -844,17 +877,6 @@
 					"type" : "string"
 				},
 				"fields" : {
-					"type" : "string"
-				}
-			}
-		},
-		"UnknownException": {
-			"properties" : {
-				"code" : {
-					"type" : "integer",
-					"format" : "int32"
-				},
-				"message" : {
 					"type" : "string"
 				}
 			}
