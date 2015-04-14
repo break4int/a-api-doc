@@ -305,7 +305,7 @@
 			"put": {
 				"operationId": "callTicket",
 				"summary": "[A-Ticket] 티켓 호출",
-				"description": "해당 타입의 다음티켓번호를 호출합니다.",
+				"description": "해당 타입의 다음티켓번호를 호출합니다. 취소된 티켓은 제외하고 다음 티켓번호 호출",
 				"tags": ["A-Ticket"],
 				"parameters": [
 					{
@@ -321,7 +321,7 @@
 					"200": {
 						"description" : "200 OK",
 						"schema" : {
-							"$ref" : "#/definitions/ResponseVO"
+							"$ref" : "#/definitions/ResponseTicketVO"
 						}
 					},
 					"default": {
@@ -683,6 +683,9 @@
 				"partner": {
 					"$ref": "#/definitions/PartnerSimpleVO"
 				},
+				"user": {
+					"$ref": "#/definitions/UserVO"
+				},
 				"ticketType": {
 					"type": "integer",
 					"format": "int32",
@@ -715,6 +718,7 @@
 			}
 		},
 		"AddTicketVO" : {
+			"required": ['partnerId', "userId", "ticketType", "number"],
 			"properties" : {
 				"partnerId": {
 					"type" : "integer",
