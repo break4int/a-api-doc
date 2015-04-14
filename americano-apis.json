@@ -108,7 +108,10 @@
 						}
 					},
 					"default": {
-						"description" : "default error"
+						"description" : "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/UnknownErrorVO"
+						}
 					}
 				}
 			}
@@ -153,7 +156,10 @@
 						}
 					},
 					"default": {
-						"description" : "default error"
+						"description" : "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/UnknownErrorVO"
+						}
 					}
 				}
 			}
@@ -182,7 +188,10 @@
 						}
 					},
 					"default": {
-						"description" : "default error"
+						"description" : "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/UnknownErrorVO"
+						}
 					}
 				}
 			}
@@ -211,7 +220,10 @@
 						}
 					},
 					"default": {
-						"description" : "default error"
+						"description" : "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/UnknownErrorVO"
+						}
 					}
 				}
 			}
@@ -240,7 +252,10 @@
 						}
 					},
 					"default": {
-						"description" : "default error"
+						"description" : "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/UnknownErrorVO"
+						}
 					}
 				}
 			}
@@ -269,7 +284,10 @@
 						}
 					},
 					"default": {
-						"description" : "default error"
+						"description" : "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/UnknownErrorVO"
+						}
 					}
 				}
 			}
@@ -299,7 +317,10 @@
 						}
 					},
 					"default": {
-						"description" : "default error"
+						"description" : "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/UnknownErrorVO"
+						}
 					}
 				}
 			}
@@ -328,7 +349,10 @@
 						}
 					},
 					"default": {
-						"description" : "default error"
+						"description" : "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/UnknownErrorVO"
+						}
 					}
 				}
 			}
@@ -358,7 +382,10 @@
 						}
 					},
 					"default": {
-						"description" : "Unexpected error"
+						"description" : "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/UnknownErrorVO"
+						}
 					}
 				}
 			}
@@ -387,7 +414,10 @@
 						}
 					},
 					"default": {
-						"description" : "Unexpected error"
+						"description" : "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/UnknownErrorVO"
+						}
 					}
 				}
 			},
