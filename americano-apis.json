@@ -1,8 +1,8 @@
 {
 	"swagger": "2.0",
  	"info": {
-   		"title": "Americano Client APIs.",
-		"description": "RESULT CODE<br>SUCCESS : A_0000<br>UNKNOWN ERROR : A_9999",
+   		"title": "Americano APIs.",
+		"_description": "설명은 상단 박스 참조",
 		"version": "0.0.0"
 	},
 	"produces": ["application/json"],
@@ -97,13 +97,13 @@
 				"operationId": "modifyUser",
 				"summary": "사용자정보 수정",
 				"description": "해당 사용자의 정보를 수정합니다.",
-				"tags": ["ToBe"]
+				"tags": ["User"]
 			},
-			"delete": {
+			"_delete": {
 				"operationId": "removeUser",
 				"summary": "사용자정보 삭제",
 				"description": "해당 사용자의 정보를 삭제합니다.",
-				"tags": ["ToBe"]
+				"tags": ["User"]
 			}
 		},
 		"/user/{userId}/ticket": {
@@ -297,6 +297,54 @@
 						"required" : true,
 						"type" : "integer",
 						"format" : "int64"
+					}
+				],
+				"responses": {
+					"200": {
+						"description" : "200 OK",
+						"schema" : {
+							"$ref" : "#/definitions/ResponseVO"
+						}
+					},
+					"default": {
+						"description" : "default error"
+					}
+				}
+			}
+		},
+		"/ticket": {
+			"post": {
+				"operationId": "addTicket",
+				"summary": "[A-Ticket] 티켓 발급",
+				"description": "발급된 티켓을 서버에 저장합니다.",
+				"tags": ["A-Ticket"],
+				"responses": {
+					"200": {
+						"description" : "200 OK",
+						"schema" : {
+							"$ref" : "#/definitions/ResponseVO"
+						}
+					},
+					"default": {
+						"description" : "default error"
+					}
+				}
+			}
+		},
+		"/ticket/{ticketType}/call": {
+			"put": {
+				"operationId": "callTicket",
+				"summary": "[A-Ticket] 티켓 호출",
+				"description": "해당 타입의 다음티켓번호를 호출합니다.",
+				"tags": ["A-Ticket"],
+				"parameters": [
+					{
+						"name" : "ticketType",
+						"in" : "path",
+						"description" : "티켓 타입",
+						"required" : true,
+						"type" : "integer",
+						"format" : "int32"
 					}
 				],
 				"responses": {
