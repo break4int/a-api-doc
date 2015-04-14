@@ -37,6 +37,10 @@
 			"_description": "Search 관련..."
 		},
 		{
+			"name": "A-Ticket",
+			"description": "A-Ticket 전용 API"
+		},
+		{
 			"name": "ToBe",
 			"description": "스펙 미정"
 		}
@@ -59,6 +63,47 @@
 						"description" : "Unexpected error"
 					}
 				}
+			}
+		},
+		"/user/{userId}": {
+			"get": {
+				"operationId": "getUserList",
+				"summary": "사용자의 상세정보 조회",
+				"description": "해당 사용자의 상세정보를 조회합니다.",
+				"tags": ["User"],
+				"parameters": [
+					{
+						"name" : "userId",
+						"in" : "path",
+						"description" : "사용자 아이디",
+						"required" : true,
+						"type" : "integer",
+						"format" : "int64"
+					}
+				],
+				"responses": {
+					"200": {
+						"description" : "An array of products",
+						"schema" : {
+							"$ref" : "#/definitions/ResponseUserVO"
+						}
+					},
+					"default": {
+						"description" : "Unexpected error"
+					}
+				}
+			},
+			"put": {
+				"operationId": "modifyUser",
+				"summary": "사용자정보 수정",
+				"description": "해당 사용자의 정보를 수정합니다.",
+				"tags": ["ToBe"]
+			},
+			"delete": {
+				"operationId": "removeUser",
+				"summary": "사용자정보 삭제",
+				"description": "해당 사용자의 정보를 삭제합니다.",
+				"tags": ["ToBe"]
 			}
 		},
 		"/user/{userId}/ticket": {
@@ -276,6 +321,7 @@
 				"parameters": [
 					{
 						"in" : "body",
+						"name": "body",
 						"description" : "회원가입 정보",
 						"required" : true,
 						"schema": {
@@ -294,47 +340,6 @@
 						"description" : "Unexpected error"
 					}
 				}
-			}
-		},
-		"/user/{userId}": {
-			"get": {
-				"operationId": "getUserList",
-				"summary": "사용자의 상세정보 조회",
-				"description": "해당 사용자의 상세정보를 조회합니다.",
-				"tags": ["ToBe"],
-				"parameters": [
-					{
-						"name" : "userId",
-						"in" : "path",
-						"description" : "사용자 아이디",
-						"required" : true,
-						"type" : "integer",
-						"format" : "int64"
-					}
-				],
-				"responses": {
-					"200": {
-						"description" : "An array of products",
-						"schema" : {
-							"$ref" : "#/definitions/ResponseUserVO"
-						}
-					},
-					"default": {
-						"description" : "Unexpected error"
-					}
-				}
-			},
-			"put": {
-				"operationId": "modifyUser",
-				"summary": "사용자정보 수정",
-				"description": "해당 사용자의 정보를 수정합니다.",
-				"tags": ["ToBe"]
-			},
-			"delete": {
-				"operationId": "removeUser",
-				"summary": "사용자정보 삭제",
-				"description": "해당 사용자의 정보를 삭제합니다.",
-				"tags": ["ToBe"]
 			}
 		}
 	},
