@@ -484,12 +484,14 @@
 				"regDate": {
 					"type": "integer",
 					"format": "int64",
-					"description": "timestamp / 데이터 등록일"
+					"description": "timestamp / 데이터 등록일",
+					"example": 1429019722223
 				},
 				"updDate": {
 					"type": "integer",
 					"format": "int64",
-					"description": "timestamp / 최근 수정일"
+					"description": "timestamp / 최근 수정일",
+					"example": 1429019722223
 				}
 			}
 		},
@@ -562,12 +564,14 @@
 				"regDate": {
 					"type": "integer",
 					"format": "int64",
-					"description": "timestamp / 데이터 등록일"
+					"description": "timestamp / 데이터 등록일",
+					"example": 1429019722223
 				},
 				"updDate": {
 					"type": "integer",
 					"format": "int64",
-					"description": "timestamp / 최근 수정일"
+					"description": "timestamp / 최근 수정일",
+					"example": 1429019722223
 				}
 			}
 		},
@@ -684,12 +688,14 @@
 				"regDate": {
 					"type": "integer",
 					"format": "int64",
-					"description": "timestamp / 데이터 등록일"
+					"description": "timestamp / 데이터 등록일",
+					"example": 1429019722223
 				},
 				"updDate": {
 					"type": "integer",
 					"format": "int64",
-					"description": "timestamp / 최근 수정일"
+					"description": "timestamp / 최근 수정일",
+					"example": 1429019722223
 				}
 			}
 		},
@@ -747,7 +753,8 @@
 				"regDate": {
 					"type": "integer",
 					"format": "int64",
-					"description": "timestamp / 데이터 등록일"
+					"description": "timestamp / 데이터 등록일",
+					"example": 1429019722223
 				},
 				"updDate": {
 					"type": "integer",
