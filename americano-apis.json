@@ -752,7 +752,8 @@
 				"updDate": {
 					"type": "integer",
 					"format": "int64",
-					"description": "timestamp / 최근 수정일"
+					"description": "timestamp / 최근 수정일",
+					"example": 1429019722223
 				}
 			}
 		},
