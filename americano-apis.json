@@ -718,7 +718,7 @@
 			}
 		},
 		"AddTicketVO" : {
-			"required": ['partnerId', "userId", "ticketType", "number"],
+			"required": ["partnerId", "userId", "ticketType", "number"],
 			"properties" : {
 				"partnerId": {
 					"type" : "integer",
