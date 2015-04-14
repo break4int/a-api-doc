@@ -56,7 +56,7 @@
 					"200": {
 						"description" : "",
 						"schema" : {
-							"$ref" : "#/definitions/ResponseVO"
+							"$ref" : "#/definitions/ResponseFingerprintVO"
 						}
 					},
 					"default": {
@@ -811,7 +811,7 @@
 					"type": "string",
 					"format": "string",
 					"description": "string / response message"
-				}
+				},
 				"result": {
 					"type": "string",
 					"format": "string",
