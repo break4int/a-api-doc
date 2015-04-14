@@ -800,6 +800,26 @@
 				}
 			}
 		},
+		"ResponseFingerprintVO": {
+			"properties" : {
+				"code": {
+					"type" : "string",
+					"format" : "string",
+					"description": "string / result code"
+				},
+				"message": {
+					"type": "string",
+					"format": "string",
+					"description": "string / response message"
+				}
+				"result": {
+					"type": "string",
+					"format": "string",
+					"description": "string / Fingerprint",
+					"example": "de305d54-75b4-431b-adb2-eb6b9e546014"
+				}
+			}
+		},
 		"ResponseVO": {
 			"properties" : {
 				"code": {
